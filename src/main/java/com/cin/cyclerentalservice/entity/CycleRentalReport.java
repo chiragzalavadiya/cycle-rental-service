@@ -15,16 +15,16 @@ public class CycleRentalReport {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "REPORT_ID")
+	@Column(name = "REPORT_ID", nullable=false, unique=true)
 	private int reportId;
 	
-	@Column(name = "REPORT_TYPE")
+	@Column(name = "REPORT_TYPE", nullable=false, length=100)
 	private String reportType;
 	
-	@Column(name = "REPORT_GENERATED_DT")
+	@Column(name = "REPORT_GENERATED_DT", nullable=false)
 	private Date reportGeneratedDate;
 	
-	@Column(name = "RIDE_ID")
+	@Column(name = "RIDE_ID", nullable=false)
 	private int rideId;
 	
 	public CycleRentalReport() {

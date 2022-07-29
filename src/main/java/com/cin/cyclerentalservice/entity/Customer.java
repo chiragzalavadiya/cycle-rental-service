@@ -15,37 +15,37 @@ import javax.persistence.Table;
 public class Customer {
 
 	@Id
-	@Column(name = "CUSTOMER_ID")
+	@Column(name = "CUSTOMER_ID", nullable=false, unique=true)
 	private int customerId;
 	
-	@Column(name = "FIRST_NM")
+	@Column(name = "FIRST_NM", nullable=false, length=100)
 	private String firstName;
 	
-	@Column(name = "MIDDLE_NM")
+	@Column(name = "MIDDLE_NM", length=100)
 	private String middleName;
 	
-	@Column(name = "LAST_NM")
+	@Column(name = "LAST_NM", nullable=false, length=100)
 	private String lastName;
 	
-	@Column(name = "STATUS_CD")
+	@Column(name = "STATUS_CD", nullable=false, length=50)
 	private String statusCode;
 	
-	@Column(name = "ADDRESS_LINE1")
+	@Column(name = "ADDRESS_LINE1", nullable=false, length=400)
 	private String addressLine1;
 	
-	@Column(name = "ADDRESS_LINE2")
+	@Column(name = "ADDRESS_LINE2", length=400)
 	private String addressLine2;
 	
-	@Column(name = "CITY")
+	@Column(name = "CITY", nullable=false, length=100)
 	private String city;
 	
-	@Column(name = "STATE")
+	@Column(name = "STATE", nullable=false, length=100)
 	private String state;
 	
-	@Column(name = "COUNTRY")
+	@Column(name = "COUNTRY", nullable=false, length=100)
 	private String country;
 	
-	@Column(name = "POSTAL_CD")
+	@Column(name = "POSTAL_CD", nullable=false, length=50)
 	private String postalCode;
 	
 	public Customer() {

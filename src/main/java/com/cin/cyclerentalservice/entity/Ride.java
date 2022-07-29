@@ -17,25 +17,25 @@ import javax.persistence.Table;
 public class Ride {
 
 	@Id
-	@Column(name = "RIDE_ID")
+	@Column(name = "RIDE_ID", nullable=false, unique=true)
 	private int rideId;
 	
-	@Column(name = "CYCLE_ID")
+	@Column(name = "CYCLE_ID", nullable=false)
 	private int cycleId;
 	
-	@Column(name = "CUSTOMER_ID")
+	@Column(name = "CUSTOMER_ID", nullable=false)
 	private int customerId;
 	
-	@Column(name = "STATUS_CD")
+	@Column(name = "STATUS_CD", nullable=false, length=50)
 	private String statusCode;
 	
-	@Column(name = "START_TIME")
+	@Column(name = "START_TIME", nullable=false)
 	private Date startTime;
 	
-	@Column(name = "END_TIME")
+	@Column(name = "END_TIME", nullable=false)
 	private Date endTime;
 	
-	@Column(name = "DISTANCE_TRAVELLED")
+	@Column(name = "DISTANCE_TRAVELLED", nullable=false)
 	private int distanceTravelled;
 	
 	public Ride() {

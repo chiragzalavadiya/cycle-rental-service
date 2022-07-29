@@ -15,13 +15,13 @@ import javax.persistence.Table;
 public class Cycle {
 
 	@Id
-	@Column(name = "CYCLE_ID")
+	@Column(name = "CYCLE_ID", nullable=false, unique=true)
 	private int cycleId;
 	
-	@Column(name = "CYCLE_BRAND")
+	@Column(name = "CYCLE_BRAND", nullable=false, length=100)
 	private String cycleBrandName;
 	
-	@Column(name = "STATUS_CD")
+	@Column(name = "STATUS_CD", nullable=false, length=50)
 	private String statusCode;
 	
 	public Cycle() {
