@@ -40,7 +40,7 @@ public class CycleRentalServiceImpl implements CycleRentalService {
 	public String generateCycleRentalReport() {
 		String reportGeneratedStatus = "All Reports are successfully generated.";
 		
-		List<Integer> dayWiseHighestDistTravellerLst = findDataBasedOnQueryKey("findDayWiseHighestDistTraveller")/*findDayWiseHighestDistTraveller()*/;
+		List<Integer> dayWiseHighestDistTravellerLst = findDataBasedOnQueryKey("findDayWiseHighestDistTraveller");
 		insertReportForReportType(dayWiseHighestDistTravellerLst, ReportType.DAY_WISE_HIGHEST_DIST_TRAVELLER);
 		
 		List<Integer> overallHighestDistTravellerLst = findDataBasedOnQueryKey("findOverallHighestDistTraveller");
@@ -111,7 +111,7 @@ public class CycleRentalServiceImpl implements CycleRentalService {
 		try {
 			Properties properties = new Properties();
 			File file = ResourceUtils.getFile("classpath:queries.properties");
-            InputStream in = new FileInputStream(file);
+            		InputStream in = new FileInputStream(file);
 			properties.load(in);
 		    return properties.getProperty(queryKey);
 		} catch (IOException io) {
